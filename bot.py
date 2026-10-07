@@ -4,6 +4,7 @@ import google.generativeai as genai
 import fitz  # PyMuPDF
 import io
 import os
+from keep_alive import keep_alive 
 
 # ================= 설정 =================
 DISCORD_TOKEN = os.environ.get('DISCORD_BOT_TOKEN')
@@ -91,4 +92,5 @@ async def summarize_doc(ctx):
         await status_msg.edit(content=f"❌ 요약 처리 중 오류가 발생했습니다.\n에러 내용: `{str(e)}`")
 
 # 봇 실행
+keep_alive()
 bot.run(DISCORD_TOKEN)
