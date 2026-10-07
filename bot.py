@@ -7,7 +7,7 @@ import os
 from keep_alive import keep_alive 
 
 # ================= 설정 =================
-DISCORD_TOKEN = os.environ.get('DISCORD_BOT_TOKEN')
+DISCORD_TOKEN = os.environ.get('DISCORD_TOKEN')
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 
 genai.configure(api_key=GEMINI_API_KEY)
